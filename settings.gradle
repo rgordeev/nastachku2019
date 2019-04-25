@@ -1,0 +1,11 @@
+rootProject.name = 'nastachku2019'
+
+include "servicea"
+include "serviceb"
+include "monitoring"
+
+rootProject.children.each { project ->
+    assert project.projectDir.isDirectory()
+    assert project.buildFile.exists()
+    assert project.buildFile.isFile()
+}
